@@ -1,3 +1,10 @@
+<a name="v1.4.0"></a>
+# [v1.4.0] Initial commit (2023-1-17)
+## Bug fixes
+
+## Enhancement
+* Security update [9d8282e](https://github.com/jglynn43/column-resizer/commit/54a6f9951a19b826c51cde8c37aafd73e663eb15) (2023-1-17)
+
 <a name="v1.3.6"></a>
 # [v1.3.6](https://github.com/MonsantoCo/column-resizer/compare/v1.3.5...v1.3.6) (2020-12-04)
 ## Bug fixes
