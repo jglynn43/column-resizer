@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test</title>
+
+    <style>
+        table {
+            width: 100%;
+            border: 1px solid #0d11ba;
+        }
+
+        thead {
+            width: 100%;
+            color: #ccc;
+        }
+
+        tbody {
+            width: 100%;
+            height: 200px;
+        }
+
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+            vertical-align: top;
+            border-left: 1px solid #ccc;
+        }
+
+    </style>
+
+
+    <script src="../dist/column-resizer.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        const elem = document.querySelector(".test");
+        const colResizable = ColumnResizer.default;
+        new colResizable(elem, {
+            liveDrag: true,
+            gripInnerHtml: "<div class='grip'></div>",
+            draggingClass: "dragging",
+            resizeMode: 'overflow',
+            widths: [275, 100, 500]
+        });
+          let resizable = ColumnResizer.default;
+
+          new resizable(document.querySelector("#somethingUnique1"),{
+              liveDrag:true,
+              draggingClass:"rangeDrag",
+              gripInnerHtml:"<div class='rangeGrip'></div>",
+              minWidth:8
+          });
+
+          new resizable(document.querySelector("#somethingUnique2"),{
+              liveDrag:true,
+              draggingClass:"rangeDrag",
+              gripInnerHtml:"<div class='rangeGrip'></div>",
+              minWidth:8
+          });
+      }
+    </script>
+
+</head>
+<body>
+
+<table class="test">
+    <thead>
+    <tr>
+        <th id="0,1">header 1</th>
+        <th id="0,2">header 2</th>
+        <th id="0,3">header 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>lean</td>
+        <td>cell 1</td>
+        <td>cell 4</td>
+    </tr>
+    <tr>
+        <td>chacha</td>
+        <td>cell 2</td>
+        <td>cell 5</td>
+    </tr>
+    <tr>
+        <td>okaoka</td>
+        <td>cell 3</td>
+        <td>cell 6</td>
+    </tr>
+    </tbody>
+</table>
+
+<table id="somethingUnique1" width="100%" border="1">
+    <tr> <th id="1,1"> header </th> <th id="1,2"> header </th> </tr>
+    <tr> <td> cell </td> <td> cell </td> </tr>
+    <tr> <td> cell </td> <td> cell </td> </tr>
+</table>
+<table id="somethingUnique2" width="100%" border="1">
+    <tr> <th id="2,1"> header </th> <th id="2,2"> header </th> </tr>
+    <tr> <td> cell </td> <td> cell </td> </tr>
+    <tr> <td> cell </td> <td> cell </td> </tr>
+</table>
+
+</body>
+</html>
